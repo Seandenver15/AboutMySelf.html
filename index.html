@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sean Denver A. Gudio's Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Sean Denver A. Gudio ✨</h1>
+  <p id="greet"></p>
+  <p>Gamer, F1 Enthusiast & Explorer of Cool Things!</p>
+</header>
+
+<main>
+
+<section class="about">
+  <div class="card">
+    <img src="your-photo.jpg" alt="My Photo">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm Sean Denver A. Gudio, a Grade 11 student who loves gaming and exploring new things. I spend my free time playing Mobile Legends and COD Mobile, watching TikTok and Instagram, and following the excitement of F1 racing. I enjoy learning new skills, sharing my interests with others, and having fun along the way!
+    </p>
+  </div>
+</section>
+
+<section class="hobbies">
+  <h2>My Hobbies 🎮</h2>
+  <div class="gallery">
+    <div class="box">
+      <img src="mobile-legends.jpg" alt="Mobile Legends">
+      <p>Mobile Legends</p>
+    </div>
+    <div class="box">
+      <img src="codm.jpg" alt="COD Mobile">
+      <p>COD Mobile</p>
+    </div>
+    <div class="box">
+      <img src="tiktok.jpg" alt="Watching TikTok & Instagram">
+      <p>TikTok & Instagram</p>
+    </div>
+    <div class="box">
+      <img src="f1.jpg" alt="F1 Racing">
+      <p>F1 Racing</p>
+    </div>
+  </div>
+</section>
+
+<section class="interaction">
+  <h2>Try Me 👇</h2>
+  <button onclick="showMessage()">Click Me</button>
+  <button onclick="changeColor()">Change Color</button>
+  <p id="message"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Sean Denver A. Gudio</p>
+</footer>
+
+<!-- ✅ INTERNAL JAVASCRIPT -->
+<script>
+function greetUser() {
+  let time = new Date().getHours();
+  let greet = "";
+
+  if (time < 12) {
+    greet = "Good Morning 🌞";
+  } else if (time < 18) {
+    greet = "Good Afternoon 🌤";
+  } else {
+    greet = "Good Evening 🌙";
+  }
+
+  document.getElementById("greet").innerHTML = greet;
+}
+
+function showMessage() {
+  document.getElementById("message").innerHTML = "You're awesome for visiting my site 💖";
+}
+
+function changeColor() {
+  let colors = ["#1abc9c", "#3498db", "#9b59b6", "#e67e22", "#e74c3c"];
+  let random = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.background = random;
+}
+
+window.onload = greetUser;
+</script>
+
+</body>
+</html>
